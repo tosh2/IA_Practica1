@@ -3,7 +3,7 @@ Redes Semanticas
 - Java
 - SWI-Prolog
 
-##Team
+## Team
 ```
 Josue
 Gato
