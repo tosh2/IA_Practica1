@@ -149,5 +149,26 @@ public class Consulta {
         
     }
     
-    
+    public void GenerarConsulta(JTextArea txt_area, String c){
+        
+        txt_area.setText("");       
+        txt_area.append(">>>>>>>>>>>>>>>>>>   Query Dinamica    >>>>>>>>>>>>>>>>>>>>\n");        
+        
+        Query q = new Query(c);
+        try {
+            
+            Map<String, Term>[] solutions = q.allSolutions();
+
+            for (int i = 0; i < solutions.length; i++) {
+                txt_area.append(solutions[i].toString() + "\n");
+                System.out.println(solutions[i]);
+            }
+            
+        } catch (Exception e) {
+            
+            txt_area.append("Revisa tu querie la hiciste mal LOL");
+            
+        }
+        
+    }
 }
